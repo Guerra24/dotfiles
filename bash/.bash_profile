@@ -8,7 +8,7 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 # Set editor
-export EDITOR=vim.gtk
+export EDITOR=vim
 
 # Fix Java Themes on GTK
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.opengl=true"
