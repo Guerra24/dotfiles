@@ -7,6 +7,12 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+if grep -q Microsoft /proc/version; then
+    # Force ZSH
+    export SHELL=/bin/zsh
+    exec /bin/zsh -l
+fi
+
 # Set editor
 export EDITOR=gvim
 
