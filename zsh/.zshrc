@@ -19,4 +19,10 @@ export EDITOR=gvim
 # Fix Java Themes on GTK
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dswing.crossplatformlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.opengl=true"
 
+# WSL Stuff
+if grep -q Microsoft /proc/version; then
+    export LIBGL_ALWAYS_INDIRECT=1
+    export DISPLAY=localhost:0.0
+fi
+
 echo "Welcome to $(uname -s) $(uname -r) at $(echo $HOST)"
