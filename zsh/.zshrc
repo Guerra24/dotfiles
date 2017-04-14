@@ -11,6 +11,8 @@ source $ZSH/oh-my-zsh.sh
 # Set up PATH
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+[ -d "$HOME/.linuxbrew/bin" ] && export PATH="$PATH:$HOME/.linuxbrew/bin"
+
 export LANG=en_US.UTF-8
 export EDITOR=gvim
 
