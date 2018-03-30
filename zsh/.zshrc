@@ -23,6 +23,7 @@ export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 if grep -q Microsoft /proc/version; then
     export LIBGL_ALWAYS_INDIRECT=1
     export DISPLAY=localhost:0.0
+    umask 22
 fi
 
 echo "Welcome to $(uname -s) $(uname -r) at $(echo $HOST)"
