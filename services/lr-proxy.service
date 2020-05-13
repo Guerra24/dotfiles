@@ -1,0 +1,15 @@
+[Unit]
+Description=AutoSSH tunnel service LANraragi
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Environment="AUTOSSH_GATETIME=0"
+Environment="TARGET_IP=" # SSH IP
+Environment="TARGET_PORT=" # SSH Port
+Environment="TARGET_USER=" # SSH User
+Environment="TARGET_KEY=" # Key File
+ExecStart=/usr/bin/autossh -M 0 -o "ServerAliveInterval 30" -o "ServerAliveCountMax 3" -o "ExitOnForwardFailure=yes" -N -i ${TARGET_KEY} -p ${TARGET_PORT} -R 3000:localhost:3000 ${TARGET_USER}@${TARGET_IP}
+
+[Install]
+WantedBy=multi-user.target

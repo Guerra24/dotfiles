@@ -1,0 +1,3 @@
+include ~/.nano/nanorc/*.nanorc
+
+set tabsize 4

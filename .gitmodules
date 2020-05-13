@@ -1,0 +1,3 @@
+[submodule "home/.nano/nanorc"]
+	path = home/.nano/nanorc
+	url = https://github.com/scopatz/nanorc.git
