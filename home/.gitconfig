@@ -1,3 +1,8 @@
 [user]
 	name = Guerra24
-	email = pablo230699@hotmail.com
+	email = lili@guerra24.net
+[credential]
+	helper = /usr/local/bin/git-credential-manager
+	credentialStore = secretservice
+[credential "https://dev.azure.com"]
+	useHttpPath = true
